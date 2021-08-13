@@ -1,0 +1,263 @@
+/* ==== Variables: Font ---- */
+:root{
+    --dark-bg-color:rgb(36, 36, 58);
+    --light-bg-color:rgb(231, 229, 229);
+    --font-lightest:white;
+    --font-dark:rgb(81, 81, 105);
+    --border-light:rgb(200, 198, 198);
+}
+
+/* ---- Base ---- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+}
+
+/* ---- Nav ---- */
+.navbar{
+    width: 100vw;
+    background-color: var(--dark-bg-color);
+    color: var(--font-lightest);
+    text-align: center;
+    font-size: 2em;
+    padding: 0.5em;
+}
+
+/* ---- Form ---- */
+.form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 500px;
+    margin: 1em auto;
+    padding: 1em;
+    box-shadow: 10px 10px 1em rgb(206, 206, 206);
+}
+.form .avatar{
+    width: 10em;
+    height: 10em;
+    background-color: aqua;
+    border-radius: 100%;
+    margin: 1em;
+}
+.form .userDetails,.form .contactDetails{
+    display: flex;
+    flex-direction: column;
+    padding: 0.9em;
+}
+.form .userDetails>input,.form .contactDetails>input{
+    font-size: 1.2em;
+    padding: 0.5em;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--font-dark);
+}
+.form .formBtn{
+    margin: 0.5em 0.7em;
+    padding: 0.6em 0.9em;
+    font-size: 1.1em;
+    color: var(--font-dark);
+    background-color: white;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+}
+.form .formBtn#cancel:hover{
+    background-color: red;
+    box-shadow: 0 0 1em red;
+    color: white;
+    border: red;
+    text-shadow: 0 0 1em white;
+}
+.form .formBtn#add:hover{
+    background-color: green;
+    box-shadow: 0 0 1em green;
+    color: white;
+    border: green;
+    text-shadow: 0 0 1em white;
+}
+.form .formBtn#update:hover{
+    background-color: green;
+    box-shadow: 0 0 1em green;
+    color: white;
+    border: green;
+    text-shadow: 0 0 1em white;
+}
+/* ---- Contact List ---- */
+.contactList{
+    width: 500px;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contactList .searchBar{
+    width: 90%;
+    margin: 1.5em auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-light);
+}
+.contactList .searchBar>input{
+    width: 80%;
+    border: none;
+    padding: 0.5em 2em;
+    font-size: 1.2em;
+    outline: none;
+    color:var(--font-dark)
+}
+.contactList .searchBar a{
+    width: 20%;
+}
+.contactList .searchBar .addContactBtn{
+    width: 100%;
+    height: 100%;
+    font-size: 1.2em;
+    background: linear-gradient(rgb(48, 48, 134),rgb(240, 130, 194));
+    color: var(--font-lightest);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+}
+.contactList .searchBar .addContactBtn:hover{
+    background: linear-gradient(rgb(80, 80, 192),rgb(255, 173, 221));
+}
+.contactList h1{
+    color: var(--font-dark);
+}
+/* ---- Contact Card ---- */
+.contactCard{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 80%;
+    border-bottom: 1px solid var(--border-light);
+    padding: 0.5em;
+}
+.contactCard .avatar{
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background-color: pink;
+}
+.contactCard a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+.contactCard a:hover{
+    background-color: inherit;
+}
+.contactCard .contactName{
+    margin: auto;
+    font-size: 1.4em;
+}
+.contactCard .action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 4em;
+}
+.contactCard .action>button,.contactCard .action>a>button{
+    background: linear-gradient(rgb(48, 48, 134),rgb(240, 130, 194));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    border: none;
+    margin: auto;
+    font-size: 1.3em;
+}
+.contactCard .action>button:hover,.contactCard .action>a>button:hover{
+    background: linear-gradient(rgb(80, 80, 192),rgb(255, 173, 221));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+/* ---- Details ---- */
+.details{
+    width: 500px;
+    margin:3em auto;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 1em rgb(206, 206, 206);
+}
+.details .avatar{
+    width: 10em;
+    height: 10em;
+    background-color: orange;
+    border-radius: 100%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+.details .name{
+    font-size: 1.4em;
+    color: var(--font-dark);
+}
+.details .contactDetails{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+    color: var(--font-dark);
+    font-size: 1.2em;
+}
+.details .contactDetails .phone{
+    border-bottom: 1px solid var(--border-light);
+    margin: 0.3em;
+}
+.details .contactDetails .email{
+    border-bottom: 1px solid var(--border-light);
+    margin: 0.3em;
+}
+
+.details .action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 7em;
+}
+.details .action>button{
+    background: linear-gradient(rgb(48, 48, 134),rgb(240, 130, 194));
+    width: 3em;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    border: none;
+    margin: auto;
+    font-size: 1.3em;
+}
+.details .action>button:hover{
+    background: linear-gradient(rgb(80, 80, 192),rgb(255, 173, 221));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+/* ---- Media Query ---- */
+@media only screen and (max-width:530px) {
+    .form{
+        width: 95%;
+    }
+    .contactList{
+        width: 100%;
+    }
+    .contactCard .contactName{
+        font-size: 1em;
+    }
+    .details{
+        width: 90%;
+    }
+}
